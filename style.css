@@ -21,6 +21,21 @@ button {
 	border-radius: 5px;
 }
 
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.profile-container {
+	text-align: end;
+}
+
+#user-position {
+	font-size: small;
+	color: grey;
+}
+
 #task-detail {
 	border-radius: 8px;
 	padding: 0.5rem;

@@ -1,6 +1,14 @@
 let globalTaskList = [];
 let globalSelectedStatus = "pending";
 
+let showUserDetailDialog = () => {
+	let username = prompt("Type your name...", 'Guest');
+	let userPosition = prompt("Type your position...", 'Employee');
+
+	document.getElementById("username").innerHTML = username;
+	document.getElementById("user-position").innerHTML = userPosition;
+};
+
 let generateTaskObj = (detail, priority, deadline) => {
 	return {
 		id:
@@ -205,6 +213,7 @@ let onTaskListStatusChange = (e) => {
 
 window.onload = () => {
 	setCurrentDate();
+	showUserDetailDialog();
 };
 
 document.getElementById("add-task-button").addEventListener("click", addTask);
