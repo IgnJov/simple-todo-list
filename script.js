@@ -2,8 +2,8 @@ let globalTaskList = [];
 let globalSelectedStatus = "pending";
 
 let showUserDetailDialog = () => {
-	let username = prompt("Type your name...", 'Guest');
-	let userPosition = prompt("Type your position...", 'Employee');
+	let username = prompt("Type your name...", "Guest");
+	let userPosition = prompt("Type your position...", "Employee");
 
 	document.getElementById("username").innerHTML = username;
 	document.getElementById("user-position").innerHTML = userPosition;
@@ -140,7 +140,23 @@ let onTaskChecked = (taskId) => {
 	let selectedTask = globalTaskList.find((task) => task.id == taskId);
 
 	if (selectedTask) {
-		selectedTask.status = "done";
+		let taskStatus = selectedTask.status;
+
+		let newTaskStatus;
+		if (taskStatus == "pending" || taskStatus == "overdue") {
+			newTaskStatus = "done";
+		} else if (taskStatus == "done") {
+			let taskDeadlineDate = new Date(selectedTask.deadline).getDate();
+			let currentDate = new Date().getDate();
+
+			if (taskDeadlineDate >= currentDate) {
+				newTaskStatus = "pending";
+			} else {
+				newTaskStatus = "overdue";
+			}
+		}
+
+		selectedTask.status = newTaskStatus;
 	}
 
 	updateTaskList();

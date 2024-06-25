@@ -67,6 +67,7 @@ button {
 	border-radius: 0;
 	border: 1px solid black;
 	padding: 1rem 0;
+	cursor: pointer;
 }
 
 .selected-task {
