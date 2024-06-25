@@ -1,0 +1,94 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	background-color: #f5f5f5;
+	padding: 1rem;
+
+	min-height: 100vh;
+}
+
+.container {
+	margin: 1rem 0;
+}
+
+button {
+	padding: 0.3rem 0.3rem;
+	border-radius: 5px;
+}
+
+#task-detail {
+	border-radius: 8px;
+	padding: 0.5rem;
+}
+
+.task-input-container .footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: 0.5rem;
+}
+
+.task-status-button-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+
+.task-status-button-container button:first-child {
+	border-top-left-radius: 8px;
+}
+
+.task-status-button-container button:last-child {
+	border-top-right-radius: 8px;
+}
+
+.task-status-button-container button {
+	border-radius: 0;
+	border: 1px solid black;
+	padding: 1rem 0;
+}
+
+.selected-task {
+	background-color: bisque;
+}
+
+.task {
+	padding: 0.5rem 1rem;
+	border-bottom: 1px solid;
+	display: flex;
+}
+
+.task-detail {
+	padding: 0.1rem 1rem;
+}
+
+.task-detail .task-priority-deadline {
+	color: grey;
+	font-size: small;
+}
+
+.task-list-container {
+	margin-top: 2rem;
+}
+
+.task-list-header {
+	margin-bottom: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.task-list {
+	height: 50vh;
+	border: 1px solid black;
+	border-top: 0;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	overflow-y: auto;
+}

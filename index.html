@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>To Do List</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container date-container">
+			<span id="weekday"></span>,
+			<span id="date"></span>
+		</div>
+		<div class="container task-input-container">
+			<textarea
+				style="width: 100%"
+				name="task-detail"
+				id="task-detail"
+				rows="5"
+				placeholder="Type new task detail.."
+			></textarea>
+			<div class="footer">
+				<div class="input-group">
+					<select name="priority" id="priority-select">
+						<option value="low" selected>Low</option>
+						<option value="medium">Medium</option>
+						<option value="high">High</option>
+					</select>
+					<input type="date" name="deadline" id="deadline-input" />
+				</div>
+				<button id="add-task-button">Add Task</button>
+			</div>
+		</div>
+		<div class="container task-list-container">
+			<div class="task-list-header">
+				<span>Task List</span>
+				<button id="clear-task-button">Clear</button>
+			</div>
+			<div class="task-status-button-container">
+				<button class="task-status-button selected-task" id="pending">
+					Task
+				</button>
+				<button class="task-status-button" id="done">Done</button>
+				<button class="task-status-button" id="overdue">Overdue</button>
+			</div>
+			<div class="task-list"></div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>
