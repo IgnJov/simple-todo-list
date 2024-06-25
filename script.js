@@ -38,8 +38,16 @@ let addTask = () => {
 		let newTask = generateTaskObj(taskDetail, taskPriority, taskDeadline);
 		globalTaskList.push(newTask);
 
+		resetTaskInput();
+
 		document.getElementById("pending").click();
 	}
+};
+
+let resetTaskInput = () => {
+	document.querySelector("#task-detail").value = "";
+	document.querySelector("#priority-select").value = "low";
+	document.querySelector("#deadline-input").value = getCurrentDateString();
 };
 
 let clearTask = () => {

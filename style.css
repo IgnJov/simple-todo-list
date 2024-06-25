@@ -108,3 +108,8 @@ button {
 	border-bottom-right-radius: 8px;
 	overflow-y: auto;
 }
+
+footer {
+	width: 100%;
+	text-align: center;
+}
